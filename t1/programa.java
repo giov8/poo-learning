@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Arquivo {
 	String nome, extensao, tipo;
 	float tamanho;
@@ -5,13 +7,14 @@ class Arquivo {
 
 class Diretorio {
 	String nome;
-	ArrayList arquivos, subdiretorios;
+	ArrayList<Arquivo> arquivos;
+	ArrayList<Diretorio> subdiretorios;
 
 }
 
-public class Programa {
+class Programa {
 	public static void main(String[] args) {
-		Diretorio pasta1 = new Diretorio;
+		Diretorio pasta1 = new Diretorio();
 		pasta1.nome = "Teste";
 	}
 }
