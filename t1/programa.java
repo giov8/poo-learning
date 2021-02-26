@@ -1,5 +1,11 @@
+/* TRABALHO 1 - Paradigmas de Programação ERE2 - 2021
+Alunos: Giovani Marciniak e Mariana Moreira
+Última Modificação: 26/02/21
+*/
+
 import java.util.ArrayList;
 
+// Lista de enumeração referentes aos tipos de arquivos
 enum TiposArquivo {
 	TEXTO, IMAGEM, PDF;
 }
@@ -41,6 +47,7 @@ class Diretorio {
 	    }
 	}
 
+	// Nessa versão recursiva serão impressas todas as subpastas e arquivos das subpastas também
 	void imprimeConteudo(char recursivo) {
 		if (recursivo != 'r') {
 			imprimeConteudo();
@@ -66,6 +73,7 @@ class Diretorio {
 	        }
 	}
 
+	// Na versão recursiva será feita a busca em todas as subpastas também
 	void imprimePorTipo (TiposArquivo tipo, char recursivo) {
 		if (recursivo != 'r') {
 			imprimePorTipo(tipo);
